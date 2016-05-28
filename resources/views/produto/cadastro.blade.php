@@ -12,16 +12,14 @@
             <br>
             Categoria do Produto:
             <select name="categoria">
-                @foreach($categorias as $categoria)
-                    <option>{{$categoria->nome;}}</option>
-                @endforeach
+
             </select>
 
             <br>
             Marca do Produto:
             <select name="marca">
                 @foreach($marcas as $marca)
-                    <option>{{$marca->nome;}}</option>
+                    <option>{{$marca->nome}}</option>
                 @endforeach
             </select>
 

@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cadastro', function () {
-    return view('produto.cadastro');
-});
+Route::resource('produtos', 'Produto');
