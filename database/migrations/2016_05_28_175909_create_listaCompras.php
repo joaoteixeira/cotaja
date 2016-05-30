@@ -14,6 +14,8 @@ class CreateListaCompras extends Migration
     {
         Schema::create('listaCompras', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('produto_id')-> unsigned();
+            $table->foreign('produto_id')->references('id')->on('produtos');
             $table->timestamps();
         });
     }
