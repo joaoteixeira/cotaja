@@ -25,13 +25,9 @@
             @endforeach
         </select>
 
-        <br>
-        Quantidade/Peso:
-        <input type="text" name="quantidade">
-
-        <br>
-        Valor:
-        <input type="text" name="valor">
+        <!--
+        CADASTRO DE QUANTIDADE E VALOR, SOMENTE QUANDO FOR REALIZAR O VINCULO COM O SUPERMERCADO
+        -->
 
         <br>
         <input type="submit">
