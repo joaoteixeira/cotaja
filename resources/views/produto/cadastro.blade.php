@@ -4,37 +4,39 @@
 </head>
 
 <body>
-    <div>
-        <form>
-            Nome do Produto:
-            <input type="text" name="nome">
+<div>
+    <form>
+        Nome do Produto:
+        <input type="text" name="nome">
 
-            <br>
-            Categoria do Produto:
-            <select name="categoria">
+        <br>
+        Categoria do Produto:
+        <select name="categorias_id">
+            @foreach($categorias as $categoria)
+                <option>{{ $categoria->nome }}</option>
+            @endforeach
+        </select>
 
-            </select>
+        <br>
+        Marca do Produto:
+        <select name="marcas_id">
+            @foreach($marcas as $marca)
+                <option>{{ $marca->nome }}</option>
+            @endforeach
+        </select>
 
-            <br>
-            Marca do Produto:
-            <select name="marca">
-                @foreach($marcas as $marca)
-                    <option>{{$marca->nome}}</option>
-                @endforeach
-            </select>
+        <br>
+        Quantidade/Peso:
+        <input type="text" name="quantidade">
 
-            <br>
-            Quantidade/Peso:
-            <input type="text" name="quantidade">
+        <br>
+        Valor:
+        <input type="text" name="valor">
 
-            <br>
-            Valor:
-            <input type="text" name="valor">
+        <br>
+        <input type="submit">
 
-            <br>
-            <input type="submit">
-
-        </form>
-    </div>
+    </form>
+</div>
 </body>
 </html>
