@@ -8,21 +8,21 @@ class Produto extends Model
 {
     protected $table = 'produtos';
 
-    protected $fillable = [ 'nome', 'categorias_id', 'marcas_id' ];
+    protected $fillable = [ 'nome', 'categoria_id', 'marca_id' ];
 
     protected $hidden = [ 'id', 'created_at', 'updated_at' ];
 
-    public function Categorias()
+    public function categoria()
     {
         return $this->belongsTo('App\Categoria');
     }
 
-    public function Marcas()
+    public function marca()
     {
         return $this->belongsTo('App\Marca');
     }
 
-    public function Supermercados()
+    public function supermercados()
     {
         return $this->belongsToMany('App\Supermercado')->withPivot('valor', 'quantidade');
     }

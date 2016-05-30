@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Marca extends Model
 {
-    protected $table='Marcas';
+    protected $table = 'marcas';
 
-    protected $fillable= ['nome'];
+    protected $fillable = [ 'nome' ];
 
-    protected $hidden= ['id', 'created_at', 'updated_at'];
+    protected $hidden = [ 'id', 'created_at', 'updated_at' ];
 
-    public function Produtos(){
+    public function produtos()
+    {
         return $this->hasMany('App\Produto');
     }
 }

@@ -11,6 +11,13 @@ use App\Http\Requests;
 
 class ProdutoController extends Controller
 {
+    public function index()
+    {
+        $produtos = Produto::all();
+        
+        return view('produto.index', ['produtos' => $produtos]);
+    }
+    
     public function create()
     {
         $marcas     = Marca::all();
@@ -24,10 +31,10 @@ class ProdutoController extends Controller
 
         Produto::create([
             'nome'      => $request['nome'],
-            'marcas_id' => $request['marcas_id'],
-            'marcas_id' => $request['categorias_id']
+            'marca_id' => $request['marca_id'],
+            'categoria_id' => $request['categoria_id']
         ]);
 
-        return redirect(produto . cadastro);
+        return redirect('/produtos');
     }
 }

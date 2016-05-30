@@ -15,10 +15,10 @@ class CreateProdutosTable extends Migration
         Schema::create('produtos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('categorias_id')-> unsigned();
-            $table->foreign('categorias_id')->references('id')->on('categorias');
-            $table->integer('marcas_id')-> unsigned();
-            $table->foreign('marcas_id')->references('id')->on('marcas');
+            $table->integer('categoria_id')-> unsigned();
+            $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->integer('marca_id')-> unsigned();
+            $table->foreign('marca_id')->references('id')->on('marcas');
             $table->timestamps();
         });
     }

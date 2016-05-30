@@ -5,23 +5,23 @@
 
 <body>
 <div>
-    <form>
+    <form action="/produtos" method="POST">
         Nome do Produto:
         <input type="text" name="nome">
 
         <br>
         Categoria do Produto:
-        <select name="categorias_id">
+        <select name="categoria_id">
             @foreach($categorias as $categoria)
-                <option>{{ $categoria->nome }}</option>
+                <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
             @endforeach
         </select>
 
         <br>
         Marca do Produto:
-        <select name="marcas_id">
+        <select name="marca_id">
             @foreach($marcas as $marca)
-                <option>{{ $marca->nome }}</option>
+                <option value="{{ $marca->id }}">{{ $marca->nome }}</option>
             @endforeach
         </select>
 
@@ -35,6 +35,7 @@
 
         <br>
         <input type="submit">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     </form>
 </div>
