@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "42f95e477bcd810ff8f93d19437a3bb8",
-    "content-hash": "d1eebc7feb327ad18f968ed28c1ef4ea",
+    "hash": "eacaf71fe4508316fba621d4cec6f524",
+    "content-hash": "d3124744e0d647d83d3bb82d13ba8069",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -160,66 +160,6 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
-        },
-        {
-            "name": "filp/whoops",
-            "version": "2.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/filp/whoops.git",
-                "reference": "d13505b240a6f580bc75ba591da30299d6cb0eec"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/d13505b240a6f580bc75ba591da30299d6cb0eec",
-                "reference": "d13505b240a6f580bc75ba591da30299d6cb0eec",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "^4.8 || ^5.0",
-                "symfony/var-dumper": "~3.0"
-            },
-            "suggest": {
-                "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
-                "whoops/soap": "Formats errors as SOAP responses"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Whoops\\": "src/Whoops/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Filipe Dobreira",
-                    "homepage": "https://github.com/filp",
-                    "role": "Developer"
-                }
-            ],
-            "description": "php error handling for cool kids",
-            "homepage": "https://github.com/filp/whoops",
-            "keywords": [
-                "error",
-                "exception",
-                "handling",
-                "library",
-                "whoops",
-                "zf2"
-            ],
-            "time": "2016-04-07 06:16:25"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -494,6 +434,60 @@
                 "laravel"
             ],
             "time": "2016-05-26 21:59:46"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v5.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "3a312d39ffe37da0f57b602618b61fd07c1fcec5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/3a312d39ffe37da0f57b602618b61fd07c1fcec5",
+                "reference": "3a312d39ffe37da0f57b602618b61fd07c1fcec5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.2.*",
+                "illuminate/routing": "5.2.*",
+                "illuminate/session": "5.2.*",
+                "illuminate/support": "5.2.*",
+                "illuminate/view": "5.2.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "illuminate/database": "5.2.*",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "http://laravelcollective.com",
+            "time": "2016-01-27 22:29:54"
         },
         {
             "name": "league/flysystem",
@@ -1837,61 +1831,6 @@
                 "environment"
             ],
             "time": "2016-04-15 10:48:49"
-        },
-        {
-            "name": "winternight/laravel-error-handler",
-            "version": "1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/darkwinternight/laravel-error-handler.git",
-                "reference": "f058aad68e39ad5d227875cfd4099309dfb44e45"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/darkwinternight/laravel-error-handler/zipball/f058aad68e39ad5d227875cfd4099309dfb44e45",
-                "reference": "f058aad68e39ad5d227875cfd4099309dfb44e45",
-                "shasum": ""
-            },
-            "require": {
-                "filp/whoops": ">=2.1.2",
-                "illuminate/support": "5.2.*|5.3.*",
-                "laravel/framework": "5.2.*|5.3.*",
-                "php": ">=5.6.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Winternight\\LaravelErrorHandler\\": "src/Winternight/LaravelErrorHandler"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Graf",
-                    "email": "a.graf@aetherworld.org"
-                }
-            ],
-            "description": "Error handler package for the Laravel 5 framework",
-            "homepage": "https://github.com/darkwinternight/laravel-error-handler",
-            "keywords": [
-                "ajax",
-                "debug",
-                "error",
-                "errorhandler",
-                "exception",
-                "laravel",
-                "laravel 5",
-                "whoops"
-            ],
-            "time": "2016-05-25 14:56:52"
         }
     ],
     "packages-dev": [

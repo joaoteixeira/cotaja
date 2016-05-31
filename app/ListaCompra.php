@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class ListaCompra extends Model
 {
-    protected $table='listacompras';
+    protected $table = 'listacompras';
+
+    protected $fillable = [ 'id', 'created_at', 'updated_at' ];
     
-    protected $fillable= ['id','created_at', 'updated_at'];
-    
-    public function Produtos(){
+    public function produtos()
+    {
         return $this->belongsToMany('App\Produto')->withTimestamps();
     }
 }

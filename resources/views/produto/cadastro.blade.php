@@ -4,37 +4,36 @@
 </head>
 
 <body>
-    <div>
-        <form>
-            Nome do Produto:
-            <input type="text" name="nome">
+<div>
+    <form action="/produtos" method="POST">
+        Nome do Produto:
+        <input type="text" name="nome">
 
-            <br>
-            Categoria do Produto:
-            <select name="categoria">
+        <br>
+        Categoria do Produto:
+        <select name="categoria_id">
+            @foreach($categorias as $categoria)
+                <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
+            @endforeach
+        </select>
 
-            </select>
+        <br>
+        Marca do Produto:
+        <select name="marca_id">
+            @foreach($marcas as $marca)
+                <option value="{{ $marca->id }}">{{ $marca->nome }}</option>
+            @endforeach
+        </select>
 
-            <br>
-            Marca do Produto:
-            <select name="marca">
-                @foreach($marcas as $marca)
-                    <option>{{$marca->nome}}</option>
-                @endforeach
-            </select>
+        <!--
+        CADASTRO DE QUANTIDADE E VALOR, SOMENTE QUANDO FOR REALIZAR O VINCULO COM O SUPERMERCADO
+        -->
 
-            <br>
-            Quantidade/Peso:
-            <input type="text" name="quantidade">
+        <br>
+        <input type="submit">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-            <br>
-            Valor:
-            <input type="text" name="valor">
-
-            <br>
-            <input type="submit">
-
-        </form>
-    </div>
+    </form>
+</div>
 </body>
 </html>

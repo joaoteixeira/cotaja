@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
-    protected $table='categorias';
+    protected $table = 'categorias';
 
-    protected $fillable= ['nome'];
-    
-    protected $hidden= ['id', 'created_at', 'updated_at'];
-    
-    public function Produtos(){
+    protected $fillable = [ 'nome' ];
+
+    protected $hidden = [ 'id', 'created_at', 'updated_at' ];
+
+    public function produtos()
+    {
         return $this->hasMany('App\Produto');
     }
 }

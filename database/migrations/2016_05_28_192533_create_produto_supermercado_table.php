@@ -14,10 +14,10 @@ class CreateProdutoSupermercadoTable extends Migration
     {
         Schema::create('produto_supermercado', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('produtos_id')-> unsigned();
-            $table->foreign('produtos_id')->references('id')->on('produtos');
-            $table->integer('supermercados_id')-> unsigned();
-            $table->foreign('supermercados_id')->references('id')->on('supermercados');
+            $table->integer('produto_id')-> unsigned();
+            $table->foreign('produto_id')->references('id')->on('produtos');
+            $table->integer('supermercado_id')-> unsigned();
+            $table->foreign('supermercado_id')->references('id')->on('supermercados');
             $table->float('valor');
             $table->integer('quantidade');
             $table->timestamps();
