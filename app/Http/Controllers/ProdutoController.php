@@ -31,8 +31,8 @@ class ProdutoController extends Controller
 
         Produto::create([
             'nome'      => $request['nome'],
-            'marca_id' => $request['marca_id'],
-            'categoria_id' => $request['categoria_id']
+            'marcas_id' => $request['marca_id'],
+            'categorias_id' => $request['categoria_id']
         ]);
 
         return redirect('/produtos');

@@ -14,7 +14,7 @@
     </tr>
     @foreach($produtos as $produto)
     <tr>
-        <td></td>
+        <td>img do produto</td>
         <td>{{ $produto->nome }}</td>
         <td>{{ $produto->categoria->nome }}</td>
         <td>{{ $produto->marca->nome }}</td>

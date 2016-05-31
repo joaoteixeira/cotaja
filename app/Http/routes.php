@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 
 Route::resource('/produtos', 'ProdutoController');
+
+Route::resource('/marcas', 'MarcaController');
