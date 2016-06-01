@@ -9,7 +9,16 @@
             @foreach($marcas as $marca)
             <tr>
                     <td>{{$marca->nome}}</td>
+                    <td><a href="/marcas/{{$marca->id}}/edit">Editar</a></td>
+                    <td>
+                        <form method="post" action="/marcas/{{$marca->id}}">
+                            <input type="submit">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                        </form>
+                    </td>
             </tr>
+
             @endforeach
         </table>
     </div>

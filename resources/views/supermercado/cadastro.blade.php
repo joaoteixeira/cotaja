@@ -6,6 +6,8 @@
 <body>
 <div>
     <form action="/supermercados" method="POST">
+        Logo do Supermercado:
+        <input type="file" name="img">
         Nome do Supermercado:
         <input type="text" name="nome">
         <br>
