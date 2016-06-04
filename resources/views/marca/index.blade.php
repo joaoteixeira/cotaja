@@ -12,13 +12,12 @@
                     <td><a href="/marcas/{{$marca->id}}/edit">Editar</a></td>
                     <td>
                         <form method="post" action="/marcas/{{$marca->id}}">
-                            <input type="submit">
+                            <input type="submit" value="Excluir">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                         </form>
                     </td>
             </tr>
-
             @endforeach
         </table>
     </div>
