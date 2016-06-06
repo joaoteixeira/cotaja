@@ -14,12 +14,12 @@ class Produto extends Model
 
     public function categoria()
     {
-        return $this->belongsTo('App\Categoria');
+        return $this->belongsTo('App\Categoria','categoria_id','id');
     }
 
     public function marca()
     {
-        return $this->belongsTo('App\Marca');
+        return $this->belongsTo('App\Marca','marca_id','id');
     }
 
     public function supermercados()

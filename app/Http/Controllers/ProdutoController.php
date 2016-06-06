@@ -37,4 +37,30 @@ class ProdutoController extends Controller
 
         return redirect('/produtos');
     }
+
+    public function edit($id)
+    {
+        $produtos = Produto::findOrFail($id);
+        $marcas = Marca::all();
+        $categorias = Categoria::all();
+
+        return view('produto.edita', array('produto' => $produtos, 'marcas' => $marcas, 'categorias' => $categorias));
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        $produtos = Produto::findOrFail($id);
+        $input = $request->all();
+        $produtos->fill($input)->save();
+        return redirect('/produtos');
+    }
+
+    public function destroy($id)
+        {
+            $produtos = Produto::findOrFail($id);
+            $produtos->delete();
+            return redirect('/produtos');
+        }
+
 }

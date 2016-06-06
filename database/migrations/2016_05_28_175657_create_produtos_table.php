@@ -21,6 +21,10 @@ class CreateProdutosTable extends Migration
             $table->foreign('marca_id')->references('id')->on('marcas');
             $table->timestamps();
         });
+        
+        Schema::table('produtos', function ($table){
+            $table->binary('img');
+        });
     }
 
     /**
